@@ -297,7 +297,10 @@ pub mod mechanism;
 pub mod registry;
 
 mod channel_bindings;
+#[cfg(not(any(doc, feature = "unstable_custom_mechanism")))]
 mod context;
+#[cfg(any(doc, feature = "unstable_custom_mechanism"))]
+pub mod context;
 
 mod vectored_io;
 
