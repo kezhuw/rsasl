@@ -277,7 +277,7 @@ mod registry_static {
     pub use linkme::distributed_slice;
 
     //noinspection RsTypeCheck
-    #[linkme::distributed_slice]
+    #[distributed_slice]
     pub static MECHANISMS: [Mechanism];
 }
 #[cfg(not(feature = "registry_static"))]
